@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body >
+
+    <form action="/updatethis/{{data[0]}}" method="POST" enctype="multipart/form-data">
+        <table>
+            <tr>
+                <td>Title</td>
+                <td><input type="text" name="title" ></td>
+            </tr>
+            <tr>
+                <td>Description</td>
+                <td><input type="text" name="desc" ></td>
+            </tr>
+            <tr>
+                <td>Image</td>
+                <td><input type="file" name="img" ></td>
+            </tr>
+        </table> 
+        <button type="submit">update</button>
+            
+        </div><br>
+
+        <div style="display:flex justify; content:space-evenly;">
+            {% for i in mydata %}
+            <h4>TITLE:<span class="spantag">{{i[0]}}</span></h4>
+            <h4>DESC:<span class="spantag">{{i[1]}}</span></h4>
+            <h4>IMG:<span class="spantag">
+                <img src="{{i[2]}}" style="    width: 50%;">
+            </span></h4>
+            
+          
+            </div>
+            {% endfor %}
+
+        </div>
+        
+    </form>
+
+    
+    
+</body>
+</html>
